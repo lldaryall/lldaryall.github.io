@@ -307,8 +307,8 @@ body.dark-theme{
 
 .home__blob{
   position: relative;
-  width: 200px;
-  height: 290px;
+  width: 170px;
+  height: 200px;
   background-color: var(--body-color);
   border: 2px solid var(--text-color-light);
   justify-self: center;
@@ -317,7 +317,12 @@ body.dark-theme{
   transition: background .4s;
 }
 
-.home__perfil{
+@keyframes flame{
+  0% { box-shadow: 0 0 10px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255,140, 0, 0.8);}
+  50% { box-shadow: 0 0 15px rgba(255, 69, 0, 1), 0 0 30px rgba(255,140, 0, 1);}
+  100% { box-shadow: 0 0 10px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255,140, 0, 0.8);}
+}
+  .home__perfil {
   width: 170px;
   height: 200px;
   background: white;
@@ -326,6 +331,7 @@ body.dark-theme{
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  animation: flame 1s infinite alternate;
 }
 
 .home__perfil img{
