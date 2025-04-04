@@ -718,15 +718,13 @@ body.dark-theme{
 .contact__data-title{
   font-size: var(--small-font-size);
   color: var(--text-color-light);
-  justify-content: flex-start;
 }
 
 .contact__data-info{
   font-size: var(--small-font-size);
   font-family: var(--title-font);
   color: var(--title-color);
-  justify-content: flex-start;}
-
+ }
 .contact__button{
   width: max-content;
   display: inline-flex;
@@ -734,16 +732,16 @@ body.dark-theme{
   column-gap: .5rem;
   color: var(--title-color);
   font-size: var(--small-font-size);
-  justify-content: flex-start;}
+  }
 
 .contact__button i{
   font-size: 1rem;
   transition: transform .3s;
-  justify-content: flex-start;}
+ }
 
 .contact__button:hover i{
   transform: translateX(.25rem);
-  justify-content: flex-start;}
+  }
 
 .contact__form{
   position: left;
