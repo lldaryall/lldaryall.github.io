@@ -320,17 +320,18 @@ body.dark-theme{
 .home__perfil{
   width: 230px;
   height: 300px;
-  background: black;
+  background: transparent;
   border-radius: 5.5rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .home__perfil img{
-  width: 300px;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .home__shape-wawes,
@@ -424,16 +425,17 @@ body.dark-theme{
 }
 
 .skills__info{
-  display: flex;
-  flex-wrap: wrap
-  justify-content: space-between;
-  gap: 2rem
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem;
+  justify-content: center;
 }
 
 .skills__data{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  text-align: center;
 }
 
 .skills__blob{
@@ -539,19 +541,18 @@ body.dark-theme{
 
 /*=============== ACHIEVEMENTS ===============*/
 .achievements__container{
-  row-gap: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
   justify-content: center;
+  padding: 1rem;
 }
 
 .achievements__card{
-  position: center;
-  width: 228px;
-  height: 322px;
-  background-color: var(--container-color);
-  text-align: center;
-  padding: 3.5rem 1rem;
-  border-radius: 7.25rem;
-  transition: background .4s;
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
 }
 
 .achievements__card i{
@@ -684,7 +685,15 @@ body.dark-theme{
 
 /*=============== CONTACT ===============*/
 .contact__container{
-  row-gap: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  justify-content: center;
+}
+
+.contact__content{
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .contact__title{
