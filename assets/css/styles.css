@@ -574,7 +574,7 @@ body.dark-theme{
 .achievements__card {
     background: var(--container-color);
     border-radius: 7.75rem;
-    padding: 4rem 3rem;
+    padding: 4.5rem 4rem;
     position: relative;
     transition: transform 0.3s ease;
 }
@@ -593,11 +593,11 @@ body.dark-theme{
   font-size: var(--h2-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: 1.5rem;
-  padding: 0;
+  margin: 1rem 1rem 1.5rem 1rem;
 }
 
 .achievements__description {
-    padding: 0;
+    margin: 0 1rem;
 }
 
 .achievements__border {
@@ -1269,10 +1269,9 @@ body.dark-theme{
   }
 
   .achievements__card{
-    width: 265px;
-    height: 345px;
-    border-radius: 7.6rem;
-    padding: 3.5rem 2.5rem;
+    width: 285px;
+    height: 365px;
+    padding: 4.5rem 4rem;
   }
 
   .achievements__card i{
