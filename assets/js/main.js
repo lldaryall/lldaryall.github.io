@@ -112,7 +112,7 @@ themeButton.addEventListener('click', () => {
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const scrollHeader = () =>{
     const header = document.getElementById('header')
-    // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+    // When the scroll is greater than 50 viewport height, add the bg-header class
     this.scrollY >= 50 ? header.classList.add('bg-header') 
                        : header.classList.remove('bg-header')
 }
@@ -132,3 +132,22 @@ sr.reveal(`.home__info div`, {delay: 600, origin: 'bottom', interval: 100})
 sr.reveal(`.skills__content:nth-child(1), .contact__content:nth-child(1)`, {origin: 'left'})
 sr.reveal(`.skills__content:nth-child(2), .contact__content:nth-child(2)`, {origin: 'right'})
 sr.reveal(`.qualification__content, .achievements__card`, {interval: 100})
+
+// Add this at the bottom of your main.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize ScrollReveal only after the DOM is fully loaded
+    if (typeof ScrollReveal === 'function') {
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '60px',
+            duration: 2500,
+            delay: 400
+        })
+
+        sr.reveal(`.home__data, .home__social, .contact__container, .footer__container`)
+        sr.reveal(`.home__image`, {origin: 'bottom'})
+        sr.reveal(`.about__data, .skills__data`, {origin: 'left'})
+        sr.reveal(`.about__image, .skills__content`, {origin: 'right'})
+        sr.reveal(`.services__card, .projects__card`, {interval: 100})
+    }
+})
