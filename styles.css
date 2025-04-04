@@ -685,8 +685,8 @@ body.dark-theme{
 
 .contact__title{
   display: flex;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
   column-gap: .5rem;
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
@@ -706,10 +706,13 @@ body.dark-theme{
 
 .contact__info{
   row-gap: 2rem;
+  justify-content: flex-start;
 }
 
 .contact__data{
   row-gap: .75rem;
+  display: flex;
+  align-items: flex-start
 }
 
 .contact__data-title{
@@ -726,7 +729,7 @@ body.dark-theme{
 .contact__button{
   width: max-content;
   display: inline-flex;
-  align-items: left;
+  align-items: center;
   column-gap: .5rem;
   color: var(--title-color);
   font-size: var(--small-font-size);
