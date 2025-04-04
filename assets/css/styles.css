@@ -75,6 +75,12 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   transition: background .4s; /*for dark mode animation*/
+  background: linear-gradient(
+    to bottom right,
+    var(--body-color),
+    hsl(158, 60%, 97%),
+    var(--body-color)
+  );
 }
 
 h1, h2, h3 {
@@ -183,6 +189,7 @@ body.dark-theme{
   font-size: var(--h1-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: .25rem;
+  animation: fadeInDown 1s ease-out;
 }
 
 .section__subtitle {
@@ -262,6 +269,7 @@ body.dark-theme{
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
   transition: color .3s;
+  position: relative;
 }
 
 .nav__link:hover{
@@ -270,6 +278,21 @@ body.dark-theme{
 
 .nav__link i{
   font-size: 1.25rem;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--first-color);
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::after {
+  width: 100%;
 }
 
 .nav__close{
@@ -335,6 +358,11 @@ body.dark-theme{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.home__perfil:hover img {
+  transform: scale(1.05);
 }
 
 .home__shape-wawes,
@@ -366,11 +394,12 @@ body.dark-theme{
 .home__social-link{
   font-size: 1.25rem;
   color: var(--text-color-light);
-  transition: color .3s;
+  transition: all 0.3s ease;
 }
 
 .home__social-link:hover{
-  color: var(--title-color);
+  color: var(--first-color);
+  transform: scale(1.2);
 }
 
 .home__info{
@@ -558,12 +587,14 @@ body.dark-theme{
   padding: 3rem 2rem;
 }
 
-.achievements__card i{
-  display: block;
-  font-size: 2rem;
-  color: var(--title-color);
-  margin-bottom: .75rem;
-  transition: transform .8s;
+.achievements__card i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: var(--first-color);
+    margin-bottom: 1rem;
+    transition: transform .8s;
 }
 
 .achievements__title{
@@ -1356,4 +1387,62 @@ html {
 .nav__link:hover {
   color: var(--first-color);
   transform: translateY(-2px);
+}
+
+/* Add hover effects to sections */
+.section__border:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Add subtle animation to titles */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add hover effect to social links */
+.home__social-link {
+    transition: all 0.3s ease;
+}
+
+.home__social-link:hover {
+    color: var(--first-color);
+    transform: scale(1.2);
+}
+
+/* Add animation to profile image */
+.home__perfil img {
+    transition: transform 0.3s ease;
+}
+
+.home__perfil:hover img {
+    transform: scale(1.05);
+}
+
+/* Add subtle hover effect to nav menu */
+.nav__link {
+    position: relative;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--first-color);
+    transition: width 0.3s ease;
+}
+
+.nav__link:hover::after {
+    width: 100%;
 }
