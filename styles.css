@@ -685,8 +685,8 @@ body.dark-theme{
 
 .contact__title{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   column-gap: .5rem;
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
@@ -726,7 +726,7 @@ body.dark-theme{
 .contact__button{
   width: max-content;
   display: inline-flex;
-  align-items: center;
+  align-items: left;
   column-gap: .5rem;
   color: var(--title-color);
   font-size: var(--small-font-size);
