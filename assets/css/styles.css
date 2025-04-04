@@ -16,6 +16,16 @@
   --container-color: hsl(158, 41%, 95%);
   --ic:black;
 
+  /* Change the first number */
+  /* Blue: 207 - Purple: 250 - Pink: 356 - Teal: 174 */
+  --gradient-color: linear-gradient(180deg,
+                      hsla(158, 48%, 72%, 0),
+                      hsla(158, 65%, 65%, 1));
+
+  /* Add gradient colors */
+  --gradient-start: hsl(158, 30%, 52%);
+  --gradient-end: hsl(158, 30%, 42%);
+
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: 'Roboto', sans-serif;
@@ -61,7 +71,7 @@
 }
 
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -493,7 +503,7 @@ body.dark-theme{
 
 /* Simplify the skills blob hover effect */
 .skills__blob:hover {
-    transform: none;
+    transform: translateY(-5px);
 }
 
 /*=============== QUALIFICATION ===============*/
@@ -564,6 +574,7 @@ body.dark-theme{
     border-radius: 7.75rem;
     padding: 3rem 2rem;
     position: relative;
+    transition: transform 0.3s ease;
 }
 
 .achievements__card i {
@@ -573,20 +584,38 @@ body.dark-theme{
     font-size: 2.5rem;
     color: var(--first-color);
     margin-bottom: 1rem;
+    transition: transform .8s;
 }
 
-.achievements__title {
-    font-size: var(--h2-font-size);
-    font-weight: var(--font-semi-bold);
-    margin-bottom: 1.5rem;
+.achievements__title{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 1.5rem;
+  padding: 0;
 }
 
 .achievements__description {
-    margin-bottom: 0;
+    padding: 0;
 }
 
 .achievements__border {
-    display: none;
+    width: 100%;
+    height: 100%;
+    border: 1.8px solid var(--first-color);
+    border-radius: 7.75rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.achievements__card:hover {
+    transform: translateY(-5px);
+}
+
+.achievements__card:hover .achievements__border {
+    opacity: 1;
 }
 
 /*=============== PROJECTS ===============*/
@@ -1339,8 +1368,9 @@ html {
 
 /* Add hover effects to sections */
 .section__border:hover {
-    transform: none;
-    box-shadow: none;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 /* Add hover effect to social links */
