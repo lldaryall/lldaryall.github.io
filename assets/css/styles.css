@@ -143,7 +143,7 @@ body.dark-theme{
 }
 
 .dark-theme .section__border{
-  border-bottom: 1px solid hsl(207, 4%, 32%);
+  border-bottom: none;
 }
 
 .dark-theme::-webkit-scrollbar{
@@ -171,17 +171,52 @@ body.dark-theme{
 
 /* Basic section animation */
 .section {
-    padding-block: 3.5rem;
+    padding-block: 2.5rem;
+    position: relative;
+    margin: 2rem 0;
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+}
+
+.section:hover {
+    border-color: var(--first-color);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Center content inside sections */
+.section > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Adjust section titles for better centering */
+.section__title, 
+.section__subtitle {
+    text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Add subtle animation to the border */
+@keyframes borderGlow {
+    0% { border-color: var(--first-color); }
+    50% { border-color: var(--first-color-alt); }
+    100% { border-color: var(--first-color); }
+}
+
+.section:hover {
+    animation: borderGlow 2s infinite;
 }
 
 .section__border {
   border-bottom: none;
   padding-bottom: 4.5rem;
-}
-
-.section__title, 
-.section__subtitle {
-  text-align: center;
 }
 
 .section__title {
@@ -205,19 +240,19 @@ body.dark-theme{
 .header{
   width: 100%;
   position: fixed;
-  bottom: 2rem;
+  bottom: 1rem;
   left: 0;
   z-index: var(--z-fixed);
 }
 
 .nav{
-  height: calc(var(--header-height) + .5rem);
+  height: calc(var(--header-height));
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--body-color);
   box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
-  padding-inline: 1.5rem;
+  padding-inline: 1rem;
   border-radius: 3rem;
   transition: background .4s;
 }
@@ -1069,24 +1104,15 @@ body.dark-theme{
 /* For large devices */
 @media screen and (min-width: 1023px){
 
-  .header{
+  .header {
     top: 0;
     bottom: initial;
-    background-color: var(--body-color);
-    transition: .4s;
+    height: 4rem;
   }
 
-  .nav{
-    width: initial;
-    height: calc(var(--header-height)+1.5rem);
-    box-shadow: none;
-    border-radius: 0;
-    column-gap: 3rem;
-    margin-inline: 1.5rem;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-    padding-left: 0;
-    padding-right: 0;
+  .nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .nav__link i,
