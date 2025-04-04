@@ -307,8 +307,8 @@ body.dark-theme{
 
 .home__blob{
   position: relative;
-  width: 200px;
-  height: 290px;
+  width: 170px;
+  height: 160px;
   background-color: var(--body-color);
   border: 2px solid var(--text-color-light);
   justify-self: center;
@@ -318,8 +318,8 @@ body.dark-theme{
 }
 
 .home__perfil{
-  width: 170px;
-  height: 260px;
+  width: 250px;
+  height: 400px;
   background: black;
   border-radius: 5.5rem;
   overflow: hidden;
@@ -329,7 +329,7 @@ body.dark-theme{
 }
 
 .home__perfil img{
-  width: 150px;
+  width: 250px;
 }
 
 .home__shape-wawes,
