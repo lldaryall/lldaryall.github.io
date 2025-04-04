@@ -196,7 +196,7 @@ body.dark-theme{
 
 /*=============== HEADER & NAV ===============*/
 .header{
-  width: 100%;
+  width: 120%;
   position: fixed;
   bottom: 2rem;
   left: 0;
@@ -319,8 +319,8 @@ body.dark-theme{
 
 .home__perfil{
   width: 170px;
-  height: 260px;
-  background: black;
+  height: 200px;
+  background: white;
   border-radius: 5.5rem;
   overflow: hidden;
   display: flex;
@@ -329,7 +329,7 @@ body.dark-theme{
 }
 
 .home__perfil img{
-  width: 150px;
+  width: 200px;
 }
 
 .home__shape-wawes,
