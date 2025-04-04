@@ -404,7 +404,7 @@ body.dark-theme{
 .skills__title{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   column-gap: .5rem;
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
@@ -428,8 +428,8 @@ body.dark-theme{
 }
 
 .skills__data{
-  justify-content: center;
-  text-align: center;
+  justify-content: left;
+  text-align: left;
 }
 
 .skills__blob{
@@ -491,7 +491,7 @@ body.dark-theme{
 .qualification__title{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   column-gap: .5rem;
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
@@ -540,7 +540,7 @@ body.dark-theme{
 }
 
 .achievements__card{
-  position: relative;
+  position: center;
   width: 228px;
   height: 322px;
   background-color: var(--container-color);
