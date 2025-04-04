@@ -7,19 +7,19 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(207, 65%, 65%);
-  --title-color: hsl(207, 4%, 16%);
-  --text-color: hsl(207, 4%, 28%);
-  --text-color-light: hsl(207, 4%, 56%);
-  --body-color: hsl(207, 4%, 99%);
-  --container-color: hsl(207, 4%, 95%);
+  --first-color: hsl(158, 30%, 52%);
+  --title-color: hsl(158, 4%, 16%);
+  --text-color: hsl(158, 4%, 28%);
+  --text-color-light: hsl(158, 4%, 56%);
+  --body-color: hsl(158, 60%, 99%);
+  --container-color: hsl(158, 41%, 95%);
   --ic:black;
 
   /* Change the first number */
   /* Blue: 207 - Purple: 250 - Pink: 356 - Teal: 174 */
   --gradient-color: linear-gradient(180deg,
-                      hsla(207, 48%, 72%, 0),
-                      hsla(207, 65%, 65%, 1));
+                      hsla(158, 48%, 72%, 0),
+                      hsla(158, 65%, 65%, 1));
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -326,6 +326,7 @@ body.dark-theme{
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateX(-1px) translateY(-1px);
 }
 
 .home__perfil img{
@@ -424,14 +425,14 @@ body.dark-theme{
   display: grid;
 }
 
-.skills__info{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 2rem;
+.skills__info {
+  display: flex;
   justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
-.skills__data{
+.skills__data {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -445,7 +446,7 @@ body.dark-theme{
   border-radius: 3rem;
   place-items: center;
   margin-bottom: 1rem;
-  transition: background .4s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skills__blob img{
@@ -463,26 +464,9 @@ body.dark-theme{
 }
 
 /* Animation skills */
-.skills__blob:hover img{
-  animation: bounce-skills .6s;
-}
-
-@keyframes bounce-skills{
-  0%{
-    transform: translate(0);
-  }
-  20%{
-    transform: translateY(-6px);
-  }
-  40%{
-    transform: translate(0);
-  }
-  60%{
-    transform: translateY(-3px);
-  }
-  80%{
-    transform: translate(0);
-  }
+.skills__blob:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /*=============== QUALIFICATION ===============*/
@@ -553,6 +537,9 @@ body.dark-theme{
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
+  transition: transform 0.3s ease;
+  background: var(--container-color);
+  padding: 3rem 2rem;
 }
 
 .achievements__card i{
@@ -1322,4 +1309,35 @@ body.dark-theme{
     margin-top: 5rem;
   }
 
+}
+
+/* Add subtle animation for page load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add subtle hover effect to navigation links */
+.nav__link {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+  transform: translateY(-2px);
 }
