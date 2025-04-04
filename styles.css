@@ -706,13 +706,11 @@ body.dark-theme{
 
 .contact__info{
   row-gap: 2rem;
-  justify-content: flex-start;
+
 }
 
 .contact__data{
   row-gap: .75rem;
-  display: flex;
-  align-items: flex-start
 }
 
 .contact__data-title{
@@ -745,12 +743,12 @@ body.dark-theme{
 }
 
 .contact__form{
-  position: relative;
+  position: left;
   row-gap: 2rem;
 }
 
 .contact__form-div{
-  position: relative;
+  position: left;
   height: 4rem;
 }
 
