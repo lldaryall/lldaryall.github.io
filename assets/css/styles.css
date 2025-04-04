@@ -424,13 +424,14 @@ body.dark-theme{
 }
 
 .skills__info{
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 3fr);
   gap: 2.5rem 2rem;
 }
 
 .skills__data{
-  justify-content: left;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .skills__blob{
