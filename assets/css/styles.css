@@ -572,7 +572,7 @@ body.dark-theme{
 .achievements__card {
     background: var(--container-color);
     border-radius: 7.75rem;
-    padding: 3rem 3.5rem;
+    padding: 3rem 2rem;
     position: relative;
     transition: transform 0.3s ease;
 }
@@ -591,11 +591,11 @@ body.dark-theme{
   font-size: var(--h2-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: 1.5rem;
-  padding: 0 1.5rem;
+  padding: 0;
 }
 
 .achievements__description {
-    padding: 0 1.5rem;
+    padding: 0;
 }
 
 .achievements__border {
