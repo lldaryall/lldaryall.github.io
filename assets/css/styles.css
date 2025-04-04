@@ -318,8 +318,8 @@ body.dark-theme{
 }
 
 .home__perfil{
-  width: 250px;
-  height: 400px;
+  width: 430px;
+  height: 700px;
   background: black;
   border-radius: 5.5rem;
   overflow: hidden;
@@ -329,7 +329,8 @@ body.dark-theme{
 }
 
 .home__perfil img{
-  width: 250px;
+  width: 430px;
+  height: auto;
 }
 
 .home__shape-wawes,
