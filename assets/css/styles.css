@@ -178,6 +178,21 @@ body.dark-theme{
 
 .section {
   padding-block: 2.5rem;
+  opacity: 1;
+  transform: none;
+  transition: none;
+  animation: sectionFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section__border {
@@ -194,7 +209,6 @@ body.dark-theme{
   font-size: var(--h1-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: .25rem;
-  animation: fadeInDown 1s ease-out;
 }
 
 .section__subtitle {
@@ -206,6 +220,17 @@ body.dark-theme{
 
 .main {
   overflow: hidden; /* For animation */
+  opacity: 1;
+  animation: pageLoad 0.6s ease-out;
+}
+
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -476,42 +501,20 @@ body.dark-theme{
 }
 
 .skills__blob {
-  position: relative;
   width: 100px;
   height: 100px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
+  background: var(--container-color);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease;
-  overflow: hidden;
-}
-
-.skills__blob::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle at center,
-    var(--first-color),
-    transparent 70%
-  );
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.skills__blob:hover::before {
-  opacity: 0.3;
+  transition: transform 0.3s ease;
 }
 
 .skills__blob img {
   width: 60%;
   height: 60%;
   object-fit: contain;
-  z-index: 1;
 }
 
 .skills__data * {
@@ -600,16 +603,11 @@ body.dark-theme{
 }
 
 .achievements__card{
-  position: relative;
-  width: 100%;
-  max-width: 280px;
-  margin: 0 auto;
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
+  background: var(--container-color);
   border-radius: 7.75rem;
   padding: 3rem 2rem;
-  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .achievements__card i {
@@ -636,7 +634,8 @@ body.dark-theme{
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.3;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .achievements__card:hover i{
@@ -1393,7 +1392,7 @@ body.dark-theme{
 }
 
 .section {
-  animation: fadeInUp 0.8s ease-out;
+  animation: sectionFadeIn 0.8s ease-out forwards;
 }
 
 /* Smooth scroll behavior */
@@ -1470,26 +1469,18 @@ html {
 }
 
 /* Add smooth page transitions */
-.section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease;
-}
-
 .section.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
 
 /* Update achievements cards to match */
 .achievements__card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
+    background: var(--container-color);
     border-radius: 7.75rem;
     padding: 3rem 2rem;
     transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
 }
 
 .achievements__border {
@@ -1500,7 +1491,12 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.3;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.achievements__card:hover .achievements__border {
+    opacity: 1;
 }
 
 /* Add subtle glow effect */
