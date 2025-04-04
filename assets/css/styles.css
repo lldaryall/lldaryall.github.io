@@ -3,7 +3,7 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
+  --header-height: 2.8rem;
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
@@ -92,8 +92,8 @@ a {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 200%;
+  height: 200;
 }
 
 /*=============== THEME ===============*/
