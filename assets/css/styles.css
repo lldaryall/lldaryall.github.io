@@ -400,9 +400,10 @@ body.dark-theme{
   transform: scale(1.2);
 }
 
-.home__info{
-  display: grid;
-  row-gap: 2rem;
+.home__info {
+    display: grid;
+    row-gap: 2rem;
+    padding: 0 2rem;
 }
 
 .home__info-title{
@@ -414,9 +415,8 @@ body.dark-theme{
 }
 
 .home__info-description,
-.home__info-number{
-  font-family: var(--title-font);
-  color: var(--title-color);
+.home__info-number {
+    padding: 0 1rem;
 }
 
 .home__info-description{
@@ -471,13 +471,14 @@ body.dark-theme{
 .skills__blob {
   width: 120px;
   height: 120px;
+  margin: 1.5rem;
+  padding: 2rem;
   background: var(--container-color);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
-  padding: 1.5rem;
 }
 
 .skills__blob img {
@@ -531,15 +532,14 @@ body.dark-theme{
   font-weight: initial;
 }
 
-.qualification__info{
-  display: grid;
-  row-gap: 2rem;
-  padding: 0 1.5rem;
+.qualification__info {
+    display: grid;
+    row-gap: 2rem;
+    padding: 2rem;
 }
 
-.qualification__name{
-  font-size: var(--normal-font-size);
-  margin-bottom: 1.25rem;
+.qualification__name {
+    margin-top: 1.5rem;
 }
 
 .qualification__country,
@@ -572,9 +572,10 @@ body.dark-theme{
 }
 
 .achievements__card {
+    padding: 5rem 4rem;
+    margin: 1rem;
     background: var(--container-color);
     border-radius: 7.75rem;
-    padding: 4.5rem 4rem;
     position: relative;
     transition: transform 0.3s ease;
 }
@@ -630,10 +631,10 @@ body.dark-theme{
   justify-content: center;
 }
 
-.projects__img{
-  width: 250px;
-  border-radius: .75rem;
-  margin-bottom: 1.25rem;
+.projects__img {
+    width: 250px;
+    border-radius: .75rem;
+    margin: 2rem 0;
 }
 
 .projects__subtitle{
@@ -1269,9 +1270,9 @@ body.dark-theme{
   }
 
   .achievements__card{
-    width: 285px;
-    height: 365px;
-    padding: 4.5rem 4rem;
+    width: 305px;
+    height: 385px;
+    padding: 5rem 4rem;
   }
 
   .achievements__card i{
@@ -1279,8 +1280,8 @@ body.dark-theme{
   }
 
   .achievements__border{
-    width: 285px;
-    height: 365px;
+    width: 305px;
+    height: 385px;
     border-radius: 8.25rem;
   }
 
