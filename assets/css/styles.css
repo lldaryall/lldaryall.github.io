@@ -92,8 +92,10 @@ a {
 }
 
 img {
-  max-width: 200%;
-  height: 200;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  display: block;
 }
 
 /*=============== THEME ===============*/
@@ -439,18 +441,32 @@ body.dark-theme{
   text-align: center;
 }
 
-.skills__blob{
+.skills__blob {
   width: 80px;
   height: 100px;
   background-color: var(--container-color);
   border-radius: 3rem;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem;
 }
 
-.skills__blob img{
-  width: 40px;
+.skills__blob * {
+  border: none !important;
+  outline: none !important;
+}
+
+.skills__blob img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent;
 }
 
 .skills__name{
